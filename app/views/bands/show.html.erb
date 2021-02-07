@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dateinit</th>
+      <th>#ConcertsMes</th>
+      <th>#LastConcert</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%=@band.name %></td>
+        <td><%=@band.dateinit %></td>
+        <td align="center"><%=@band.concerts.count %></td>
+        <td align="center"><%=@band.last_concert.strftime("%Y - %B - %d") %></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<%= link_to 'Edit', edit_band_path(@band) %> |
+<%= link_to 'Back', bands_path %>
